@@ -1,6 +1,5 @@
+#include ".colors/nord"
+
 xterm*faceName:         Fira Code
 xterm*faceSize:         10
 xterm*renderFont:       true
-
-xterm*background:       #434C5E
-xterm*cursorColor:      #ECEFF4
