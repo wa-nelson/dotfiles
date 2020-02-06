@@ -19,40 +19,25 @@ font pango:monospace 8
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-for_window [class=".*"] border pixel 0
-
-gaps inner 10
-gaps outer 5
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Before i3 v4.8, we used to recommend this one as the default:
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, its unicode glyph coverage is limited, the old
+# X core fonts rendering does not support right-to-left and this being a bitmap
+# font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id "~/.config/rofi/scripts/appsmenu.sh"
+#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec "~/.config/rofi/scripts/appsmenu.sh"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -60,10 +45,10 @@ bindsym $mod+d exec --no-startup-id "~/.config/rofi/scripts/appsmenu.sh"
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -72,10 +57,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -84,10 +69,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+Control+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+Control+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -106,50 +91,70 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# lock
-bindysm $mod+i exec "/bin/alex/i3lockdpms.sh"
-
 # focus the child container
 #bindsym $mod+d focus child
 
+# switch to workspace
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+ 
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 0
+
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
-set $bgPape "~/Pictures/Wallpapers/yellowWaves.jpg"
+#set $ws1 "1"
+#set $ws2 "2"
+#set $ws3 "3"
+#set $ws4 "4"
+#set $ws5 "5"
+#set $ws6 "6"
+#set $ws7 "7"
+#set $ws8 "8"
+#set $ws9 "9"
+#set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1; exec feh --bg-fill $bgPape 
-bindsym $mod+2 workspace number $ws2; exec feh --bg-fill $bgPape
-bindsym $mod+3 workspace number $ws3; exec feh --bg-fill $bgPape
-bindsym $mod+4 workspace number $ws4; exec feh --bg-fill $bgPape
-bindsym $mod+5 workspace number $ws5; exec feh --bg-fill $bgPape
-bindsym $mod+6 workspace number $ws6; exec feh --bg-fill $bgPape
-bindsym $mod+7 workspace number $ws7; exec feh --bg-fill $bgPape
-bindsym $mod+8 workspace number $ws8; exec feh --bg-fill $bgPape
-bindsym $mod+9 workspace number $ws9; exec feh --bg-fill $bgPape
-bindsym $mod+0 workspace number $ws10; exec feh --bg-fill $bgPape
+#bindsym $mod+1 workspace $ws1; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+2 workspace $ws2; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+3 workspace $ws3; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+4 workspace $ws4; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+5 workspace $ws5; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+6 workspace $ws6; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+7 workspace $ws7; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+8 workspace $ws8; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+9 workspace $ws9; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+#bindsym $mod+0 workspace $ws10; exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+#bindsym $mod+Shift+1 move container to workspace $ws1
+#bindsym $mod+Shift+2 move container to workspace $ws2
+#bindsym $mod+Shift+3 move container to workspace $ws3
+#bindsym $mod+Shift+4 move container to workspace $ws4
+#bindsym $mod+Shift+5 move container to workspace $ws5
+#bindsym $mod+Shift+6 move container to workspace $ws6
+#bindsym $mod+Shift+7 move container to workspace $ws7
+#bindsym $mod+Shift+8 move container to workspace $ws8
+#bindsym $mod+Shift+9 move container to workspace $ws9
+#bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -158,9 +163,28 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+set $focusedBorder    #4f0000
+set $dNumix           #3a3a3a
+set $urgent-bg-color  #E53935
+
+# window colors
+#                       border              background         text                 indicator
+client.focused          $focusedBorder      $focusedBorder     $text-color          $focusedBorder
+client.unfocused        $dNumix             $dNumix            $text-color          $dNumix
+client.focused_inactive $dNumix		    $dNumix            $dNumix              $dNumix
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #81a856
+hide_edge_borders both
+
+#Scroll config
+#exec --no-startup-id synclient NaturalScrollling=1 VertScrollDelta=-113
+gaps inner 10
+gaps outer 5
+smart_gaps on
+#smart_borders on
+for_window [class="^.*"] border pixel 0
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
-
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -186,21 +210,24 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-## lock mode
-#bindsym Control+$mod+l exec i3lock
-bindsym Control+$mod+i exec "i3-msg exit"
-bindsym Control+$mod+s exec "sudo pm-suspend"
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status -c ~/.config/i3/i3status.conf
+        status_command ~/.config/i3status/myconfig.sh
+	font pango:monospace 12
+	mode hide
+	hidden_state hide
+	modifier $mod+Control
 }
 
-exec_always --no-startup-id "compton -b"
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/yellowWaves.jpg
-exec_always --no-startup-id nm-applet
-exec_always --no-startup-id pasystray
-exec_always --no-startup-id fluxgui
+exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+exec --no-startup-id nm-applet
+
+bindsym F10 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym F9 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym F8 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym ctrl+$mod+b+u "echo 75 | sudo tee /sys/class/backlight/intel_backlight/brightness"
+bindsym ctrl+$mod+b+l "echo 25 | sudo tee /sys/class/backlight/intel_backlight/brightness"
+bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
 bindsym ctrl+$mod+l exec --no-startup-id "~/.config/i3/lock.sh"
