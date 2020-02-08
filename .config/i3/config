@@ -215,8 +215,9 @@ bar {
 	modifier $mod+Control
 }
 
-exec feh --bg-fill ~/Pictures/Wallpapers/774372.jpg
+exec feh --bg-fill ~/Pictures/Wallpapers/Papes/Gradients/Rainbow.jpg
 exec --no-startup-id nm-applet
+exec_always --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 
 bindsym F10 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym F9 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
