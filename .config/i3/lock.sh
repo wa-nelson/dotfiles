@@ -1,6 +1,11 @@
-#!/bin/sh
-set -e
-xset dpms force off
-xset s off dpms 0 10 0
-i3lock --color=4c7899 --ignore-empty-password --show-failed-attempts --nofork
-xset s off -dpms
+#!/bin/bash
+
+lock-blur() {
+	TMPBG=/tmp/screen.png
+	scrot $TMPBG
+#	convert $TMPBG -scale 10% -scale 1000% $TMPBG ## faster performance
+	convert $TMPBG -blur 0x8 $TMPBG
+	i3lock -i $TMPBG
+}
+
+lock-blur && sleep 10 && xset dpms force off
