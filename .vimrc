@@ -55,3 +55,11 @@ nnoremap <leader>w :w<CR>
 
 " jk
 inoremap jk <esc>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Movement
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual line movement
+nnoremap j gj
+nnoremap k gk
+
