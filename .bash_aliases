@@ -1,5 +1,5 @@
 alias v='vim'
-alias sv='sudo vim'
+alias sv='sudo -E vim'
 
 ## Colorize ls output
 alias ls='ls --color=auto'
