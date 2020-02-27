@@ -1,3 +1,5 @@
+source .aliases_local
+
 alias v='vim'
 alias sv='sudo -E vim'
 
@@ -33,9 +35,12 @@ alias sudo='sudo '
 
 ## todo.txt
 alias todo='${HOME}/Programs/todo.txt_cli-2.11.0/todo.sh'
+alias todos='unison /home/alex/Documents/ProductivitySuite/todo/ /home/alex/Dropbox/Apps/Todotxt+/'
 
 ## vdirsyncer
 alias vdirsyncer='${HOME}/.local/bin/vdirsyncer'
 
 ## khal
 alias khal='${HOME}/.local/bin/khal'
+alias khali='khal interactive'
+alias khalc='khal calendar'
