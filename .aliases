@@ -33,3 +33,9 @@ alias sudo='sudo '
 
 ## todo.txt
 alias todo='${HOME}/Programs/todo.txt_cli-2.11.0/todo.sh'
+
+## vdirsyncer
+alias vdirsyncer='${HOME}/.local/bin/vdirsyncer'
+
+## khal
+alias khal='${HOME}/.local/bin/khal'
