@@ -158,7 +158,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-set $focusedBorder    #4f0000
+set $focusedBorder    #FA8072
 set $dNumix           #3a3a3a
 set $urgent-bg-color  #E53935
 
@@ -176,7 +176,7 @@ gaps inner 10
 gaps outer 5
 smart_gaps on
 #smart_borders on
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 3
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
