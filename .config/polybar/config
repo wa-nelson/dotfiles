@@ -366,13 +366,13 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = 
 
-label = %{F#00b894}%{F-} %time%  %{F#00b894}%{F-} %date%
+label = %{F#FA8072}%{F-} %time%  %{F#FA8072}%{F-} %date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume =  %{F#00b894}%{F-} %percentage%%
+label-volume =  %{F#FA8072}%{F-} %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = %{F#d63031}%{F-} muted
