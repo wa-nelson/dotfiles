@@ -141,9 +141,9 @@ font-2 = Font Awesome 5 Free Regular:style=Regular:size=10;0
 font-3 = Font Awesome 5 Free Solid:style=Solid:size=10;0
 font-4 = Font Awesome 5 Brands Regular:style=Regular:size=10;0
 
-modules-left =
-modules-center = mpd
-modules-right = 
+modules-left = cpu memory
+modules-center = 
+modules-right = date battery
 
 wm-restack = i3
 
@@ -151,6 +151,7 @@ override-redirect = true
 
 click-left = mpc toggle
 ;scroll-up = 
+scroll-up = pactl set-sink-volume 0 +2% 
 ;scroll-down = 
 ;cursor-click = pointer
 ;cursor-scroll = ns-resize
@@ -198,6 +199,7 @@ click-left = mpc toggle
 ;scroll-down = 
 ;cursor-click = pointer
 ;cursor-scroll = ns-resize
+
 [bar/topright]
 width = 29%
 height = 42
@@ -389,7 +391,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #1fbed6
 label = %percentage:2%%
 
 [module/memory]
@@ -397,12 +399,12 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = #97c30a
 label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0f0u9
+interface = w1p1s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -452,13 +454,13 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = 
 
-label = %{F#00b894}%{F-} %time%  %{F#00b894}%{F-} %date%
+label = %{F#FA8072}%{F-} %time%  %{F#FA8072}%{F-} %date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume =  %{F#00b894}%{F-} %percentage%%
+label-volume =  %{F#FA8072}%{F-} %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = %{F#d63031}%{F-} muted
