@@ -3,6 +3,8 @@ source .aliases_local
 alias v='vim'
 alias sv='sudo -E vim'
 
+alias r='ranger'
+
 ## Colorize ls output
 alias ls='ls --color=auto'
 

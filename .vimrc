@@ -63,3 +63,4 @@ inoremap jk <esc>
 nnoremap j gj
 nnoremap k gk
 
+set mouse=a
