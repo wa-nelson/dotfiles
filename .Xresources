@@ -1,4 +1,5 @@
-#include ".colors/nord"
+#include ".colors/gruvbox-dark.xresources"
 
 xterm*faceName: Fira Code
 xterm*faceSize: 18
+Xcursor.size: 24
