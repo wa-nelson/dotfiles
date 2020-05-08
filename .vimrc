@@ -33,13 +33,10 @@ syntax on
 " => Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Number of spaces per tab
-set tabstop=4
+set tabstop=2
 
 " Number of spaces in tab when editing
-set softtabstop=4
-
-" Tabs are spaces
-set expandtab
+set softtabstop=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings

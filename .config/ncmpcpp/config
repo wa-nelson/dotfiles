@@ -1,5 +1,5 @@
 
- mpd_music_dir = "/media/alex/2TB/Music/Artists"  
+ mpd_music_dir = "/mnt/Music/Artists"  
  lyrics_directory  = ~/.config/ncmpcpp/lyrics
  ncmpcpp_directory  = ~/.config/ncmpcpp
  mpd_host = "localhost"

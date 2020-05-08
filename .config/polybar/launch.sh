@@ -11,7 +11,7 @@ polybar topright &
 polybar topleft1080
 fi
 
-if xrandr | grep '*' | grep '3840x2160'; then
+if xrandr | grep ' connected' | grep '3840x2160'; then
 polybar topright &
 polybar topleft4k
 fi

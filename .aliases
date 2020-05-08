@@ -1,4 +1,4 @@
-source .aliases_local
+source ~/.aliases_local
 
 alias v='nvim'
 alias sv='sudo -E nvim'
