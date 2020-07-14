@@ -17,10 +17,10 @@
 ;==========================================================
 
 [colors]
-background = #1c2325
-background-alt = #414c50
-foreground = #dfe6e9
-foreground-alt = #b2bec3
+background = #282828
+background-alt = #1d2021
+foreground = #ebdbb2
+foreground-alt = #a89984
 primary = #0984e3
 secondary = #00b894
 alert = #d63031
@@ -317,12 +317,12 @@ ws-icon-8 = 9;9: 
 ws-icon-9 = 10;10: 
 
 label-mode-padding = 2
-label-mode-foreground = #000
+label-mode-foreground = #928374
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-background = ${colors.background-alt}
+label-focused-background = #504945
 label-focused-underline=
 label-focused-padding = 2
 
@@ -391,7 +391,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #1fbed6
+format-underline = #fb4934
 label = %percentage:2%%
 
 [module/memory]
@@ -399,7 +399,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #97c30a
+format-underline = #b8bb26
 label = %percentage_used%%
 
 [module/wlan]
@@ -454,13 +454,13 @@ format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = 
 
-label = %{F#FA8072}%{F-} %time%  %{F#FA8072}%{F-} %date%
+label = %{F#fabd2f}%{F-} %time%  %{F#fabd2f}%{F-} %date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume =  %{F#FA8072}%{F-} %percentage%%
+label-volume =  %{F#fabd2f}%{F-} %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = %{F#d63031}%{F-} muted

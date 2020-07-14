@@ -122,9 +122,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-set $focusedBorder    #FA8072
-set $dNumix           #3a3a3a
-set $urgent-bg-color  #E53935
+set $focusedBorder    #fabd2f
+set $dNumix           #282828
+set $urgent-bg-color  #928374
 
 # window colors
 #                       border              background         text                 indicator
@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/pape.png
+exec_always --no-startup-id feh --bg-fill ~/dotfiles/gruvPape.jpg
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
