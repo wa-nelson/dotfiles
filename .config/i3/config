@@ -186,4 +186,4 @@ bindsym ctrl+$mod+b+l "echo 25 | sudo tee /sys/class/backlight/intel_backlight/b
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
 
 bindsym ctrl+$mod+l exec --no-startup-id "~/.config/i3/lock.sh"
-bindsym ctrl+$mod+k exec --no-startup-id "systemctl suspend"
+bindsym ctrl+$mod+k exec --no-startup-id "systemctl hibernate"

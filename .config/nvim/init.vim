@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 autocmd vimenter * NERDTree
+autocmd vimenter * wincmd w
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
