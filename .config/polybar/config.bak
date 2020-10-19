@@ -1,4 +1,15 @@
-rn more about how to configure Polybar
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
 ;   go to https://github.com/polybar/polybar
 ;
 ;   The README contains a lot of information
@@ -6,546 +17,540 @@ rn more about how to configure Polybar
 ;==========================================================
 
 [colors]
-background = ${xrdb:background} 
-background-alt = ${xrdb:color8}
-foreground = ${xrdb:foreground}
-foreground-alt = ${xrdb:color15}
-red = ${xrdb:color1}
-green = ${xrdb:color2}
-yellow = ${xrdb:color3}
-blue = ${xrdb:color4}
-purple = ${xrdb:color5}
-cyan = ${xrdb:color6}
-orange = ${xrdb:color16}
-magenta = ${xrdb:color17}
-primary = ${colors.red}
-secondary = ${colors.purple}
-alert = ${colors.yellow}
+background = #282828
+background-alt = #1d2021
+foreground = #ebdbb2
+foreground-alt = #a89984
+primary = #0984e3
+secondary = #00b894
+alert = #d63031
 
-;------------;
-;  TOPLEFT   ;
-;------------;
-
-[bar/TopLeft]
-line-size = 0
-line-color = 
-
-border-size = 0
-border-color = #00000000
-
-;------------;
-; DIMENSIONS ;
-;------------;
-
-width = 26.76%
-height = 35
-offset-y = 0
-offset-x = 0
-
-border-top-size = 8
-border-bottom-size = 0
-border-right-size = 0
-border-left-size = 8
-
-;----------;
-; LOCATION ;
-;----------;
-
-bottom = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = "SFNS Display:style=Regular:size=12:antialias=true;2"
-font-1 = "NotoSans Nerd Font:style=Regular:size=11;2"
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
-radius = 6.0
-background = ${colors.background}
-fixed-center = false
-padding-left = 2
-padding-right = 2
-
-module-margin-left = 0
-module-margin-right = 0
-
-modules-left = powermenu 
-modules-right = i3 
-
-wm-restack = i3
-override-redirect = true
-
-;------------;
-; TOPCENTER  ;
-;------------;
-
-[bar/TopCenter]
-line-size = 0
-line-color = 
-
-border-size = 0
-border-color = #00000000
-background = ${colors.background}
-
-;------------;
-; DIMENSIONS ;
-;------------;
-
-width = 10%
-height = 35
-offset-y = 0
-offset-x = 1725
-;offset is 640 * (1 - 0.width) 
-
-border-top-size = 8
-border-bottom-size = 0
-border-right-size = 0
-border-left-size = 0
-
-;----------;
-; LOCATION ;
-;----------;
-
-bottom = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = "SFNS Display:style=Regular:size=11:antialias=true;2"
-font-1 = "NotoSans Nerd Font:style=Regular:size=10;2"
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
-radius = 6.0
-fixed-center = true
-padding-left = 2
-padding-right = 2
-
-module-margin-left = 0
-module-margin-right = 0
-
-modules-center= time-date
-
-tray-position = none
-tray-padding =2 
-
-wm-restack = i3
-override-redirect = true
-;------------;
-;  TOPRIGHT  ;
-;------------;
-
-[bar/TopRight]
-line-size = 0
-line-color = 
-
-border-size = 0
-border-color = #00000000
-
-override-redirect = true
-;------------;
-; DIMENSIONS ;
-;------------;
-
-width = 20%
-height = 35
-offset-y = 0
-offset-x = 1024
-;offset is 1280*(1-0.width)
-
-border-top-size = 8
-border-bottom-size = 0
-border-right-size = 8
-border-left-size = 0
-
-;----------;
-; LOCATION ;
-;----------;
-
-bottom = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = "SFNS Display:style=Regular:size=12:antialias=true;2"
-font-1 = "NotoSans Nerd Font:style=Regular:size=11;2"
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
+[bar/topleft1440]
+width = 29%
+height = 42
 radius = 6.0
 fixed-center = false
-padding-left = 3
-padding-right = 2
+offset-x = 1800
 background = ${colors.background}
+foreground = ${colors.foreground}
 
-module-margin-left = 2
-module-margin-right = 0
-
-modules-left = eth wlan
-modules-right = battery
-
-tray-position = none
-tray-padding =2 
-
-wm-restack = i3
-
-;------------;
-;  i3MENU    ;
-;------------;
-
-[bar/i3menu]
-line-size = 0
-line-color = 
-
-border-size = 0
-border-color = #00000000
-
-override-redirect = true
-;------------;
-; DIMENSIONS ;
-;------------;
-
-width = 20%
-height = 35
-offset-y = 0
-offset-x = 342.528
-;offset is 1280xtopLeftwidfth
-
-border-top-size = 8
-border-bottom-size = 0
-border-right-size = 0
-border-left-size = 0
-
-;----------;
-; LOCATION ;
-;----------;
-
-bottom = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = "SFNS Display:style=Regular:size=12:antialias=true;2"
-font-1 = "NotoSans Nerd Font:style=Regular:size=11;3"
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
-fixed-center = false
-padding-left = 2
-padding-right = 2
-background =
-
-module-margin-left = 2
-module-margin-right = 0
-
-modules-left = i3menu
-
-wm-restack = i3
-
-;------------;
-;  BOTBAR    ;
-;------------;
-
-[bar/PolybarBot]
 line-size = 3
 line-color = #f00
 
-border-size = 4
+border-top-size = 12
+border-bottom-size = 4
+border-left-size = 15
+border-right-size = 16
 border-color = #00000000
 
-;------------;
-; DIMENSIONS ;
-;------------;
+padding-left = 1
+padding-right = 1
 
-width = 100%
-height = 35
-offset-y = 0
-offset-x = 0
+module-margin-left = 1 
+module-margin-right = 1
 
-border-top-size = -1
-border-bottom-size = 6
-border-right-size = 10
-border-left-size = 14
+font-0 = Hasklig:style=Regular:pixelsize=12;1
+font-1 = FontAwesome:size:12
+font-2 = Font Awesome 5 Free Regular:style=Regular:size=12;0
+font-3 = Font Awesome 5 Free Solid:style=Solid:size=12;0
+font-4 = Font Awesome 5 Brands Regular:style=Regular:size=12;0
 
-;----------;
-; LOCATION ;
-;----------;
+modules-left = cpu memory
+modules-center = mpd
+modules-right = ethernet date
 
-bottom = true
+wm-restack = i3
 
-;-------;
-; FONTS ;
-;-------;
+override-redirect = true
 
-font-1 = "NotoSans Nerd Font:style=Regular:size=11:antialias=true;3"
-font-0 = "SFNS Display:style=Regular:size=11:antialias=true;2"
-font-2 = "Segoe UI Symbol:style=Regular:size=12;1"
-font-3 = "Source Code Pro:style=Regular:size=12;3"
-font-4 = "Quivira:style=Regular:size=13;1"
-font-5 = "Scientifica:size=11;2"
+scroll-up = pactl set-sink-volume 0 +2% 
+;scroll-down = 
+;cursor-click = pointer
+;cursor-scroll = ns-resize
 
-;--------;
-; COLORS ;
-;--------;
+[bar/topleft4k]
+width = 29%
+height = 42
+radius = 6.0
+fixed-center = false
+offset-x = 2725
+background = ${colors.background}
+foreground = ${colors.foreground}
 
-background = 
-background-alt = #555
-foreground = ${xrdb:foreground}
-foreground-alt = #555
-primary_light = ${xrdb:color1}
-primary_dark = ${xrdb:color6}
-secondary = ${srdb:color7}
-alert = ${xrdb:color4}
+line-size = 3
+line-color = #f00
 
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
+border-top-size = 12
+border-bottom-size = 4
+border-left-size = 15
+border-right-size = 16
+border-color = #00000000
 
-radius = 0.0
-fixed-center = true
-padding-left = 0
-padding-right = 2
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1 
+module-margin-right = 1
+
+font-0 = Hasklig:style=Regular:pixelsize=12;1
+font-1 = FontAwesome:size:12
+font-2 = Font Awesome 5 Free Regular:style=Regular:size=12;0
+font-3 = Font Awesome 5 Free Solid:style=Solid:size=12;0
+font-4 = Font Awesome 5 Brands Regular:style=Regular:size=12;0
+
+modules-left = cpu memory
+modules-center = mpd
+modules-right = ethernet date
+
+wm-restack = i3
+
+override-redirect = true
+
+scroll-up = pactl set-sink-volume 0 +2% 
+;scroll-down = 
+;cursor-click = pointer
+;cursor-scroll = ns-resize
+
+[bar/topleft1080]
+width = 29%
+height = 42
+radius = 6.0
+fixed-center = false
+offset-x = 1362
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-top-size = 12
+border-bottom-size = 4
+border-left-size = 15
+border-right-size = 16
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1 
+module-margin-right = 1
+
+font-0 = Hasklig:style=Regular:pixelsize=12;1
+font-1 = FontAwesome:size:12
+font-2 = Font Awesome 5 Free Regular:style=Regular:size=12;0
+font-3 = Font Awesome 5 Free Solid:style=Solid:size=12;0
+font-4 = Font Awesome 5 Brands Regular:style=Regular:size=12;0
+
+modules-left = cpu memory
+modules-center = 
+modules-right = ethernet date
+
+wm-restack = i3
+
+override-redirect = true
+
+scroll-up = pactl set-sink-volume 0 +2% 
+;scroll-down = 
+;cursor-click = pointer
+;cursor-scroll = ns-resize
+
+[bar/topmiddle4k]
+width = 25%
+height = 42
+radius = 6.0
+fixed-center = false
+offset-x = 719
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-top-size = 12
+border-bottom-size = 4
+border-left-size = 15
+border-right-size = 16
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-modules-left = pulseaudio backlight-acpi
-modules-center = spotify
-modules-right = battery
+font-0 = Hasklig:style=Regular:pixelsize=10;1
+font-1 = FontAwesome:size:10
+font-2 = Font Awesome 5 Free Regular:style=Regular:size=10;0
+font-3 = Font Awesome 5 Free Solid:style=Solid:size=10;0
+font-4 = Font Awesome 5 Brands Regular:style=Regular:size=10;0
 
-;---------;
-; MODULES ;
-;---------;
+modules-left = cpu memory
+modules-center = 
+modules-right = date battery
 
-[module/spotify]
-type = custom/script
-interval = 5
-format-prefix = " "
-format = <label>
-exec = python $HOME/.config/polybar/spotify.py
-format-underline = 
-format-foreground = ${colors.foreground}
+wm-restack = i3
+
+override-redirect = true
+
+click-left = mpc toggle
+;scroll-up = 
+scroll-up = pactl set-sink-volume 0 +2% 
+;scroll-down = 
+;cursor-click = pointer
+;cursor-scroll = ns-resize
+
+[bar/topmiddle1080]
+width = 25%
+height = 42
+radius = 6.0
+fixed-center = false
+offset-x = 719
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-top-size = 12
+border-bottom-size = 4
+border-left-size = 15
+border-right-size = 16
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Hasklig:style=Regular:pixelsize=10;1
+font-1 = FontAwesome:size:10
+font-2 = Font Awesome 5 Free Regular:style=Regular:size=10;0
+font-3 = Font Awesome 5 Free Solid:style=Solid:size=10;0
+font-4 = Font Awesome 5 Brands Regular:style=Regular:size=10;0
+
+modules-left =
+modules-center = mpd
+modules-right = 
+
+wm-restack = i3
+
+override-redirect = true
+
+click-left = mpc toggle
+;scroll-up = 
+;scroll-down = 
+;cursor-click = pointer
+;cursor-scroll = ns-resize
+
+[bar/topright]
+width = 29%
+height = 42
+radius = 6.0
+fixed-center = false
+offset-x = 
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-top-size = 12
+border-bottom-size = 4
+border-left-size = 16
+border-right-size = 15
+border-color = #00000000
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Hasklig:style=Regular:pixelsize=12;1
+font-1 = FontAwesome:size:12
+font-2 = Font Awesome 5 Free Regular:style=Regular:size=12;0
+font-3 = Font Awesome 5 Free Solid:style=Solid:size=12;0
+font-4 = Font Awesome 5 Brands Regular:style=Regular:size=12;0
+
+modules-left = i3
+modules-center =
+modules-right =
+
+wm-restack = i3
+
+;\override-redirect = true
+
+;cursor-click = pointer
+;cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-;label = %title:0:30:...%
-format-foreground = ${colors.foreground}
-label = %title%
-label-maxlen = 80
-label-empty =
+label = %title:0:30:...%
 
-[module/i3]
-type = internal/i3
-format = <label-state>
-index-sort = true
-wrapping-scroll = false
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;4
-ws-icon-4 = 5;5
-ws-icon-5 = 6;6
-ws-icon-6 = 7;7
-ws-icon-7 = 8;8
-ws-icon-8 = 9;9
-ws-icon-9 = 10;
-;ws-icon-default = 
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
 
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
 
-label-mode-padding = 0
-label-mode-foreground = ${colors.primary}
-label-mode-background =
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
 
-; focused = Active workspace on focused monitor
-label-focused = %icon%
-label-focused-background = 
-label-focused-foreground = ${colors.foreground}
-;label-focused-underline = ${colors.foreground}
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/bspwq]
+type = internal/bspwm
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
-label-unfocused-padding = 1
-label-unfocused-foreground = ${colors.background-alt}
-;label-unfocused-underline =
+label-occupied = %index%
+label-occupied-padding = 2
 
-; visible = Active workspace on unfocused monitor
-label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-;label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
+label-urgent = %index%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
 
-; urgent = Workspace with urgency hint set
-label-urgent = %icon%
-label-urgent-foreground = ${colors.alert}
-label-urgent-padding = 1
+label-empty = %index%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
 
-[module/i3menu]
+[module/i3]
 type = internal/i3
-format = <label-mode>
+format = <label-mode> <label-state>
+index-sort = true
+wrapping-scroll = false
 
-label-mode-foreground = ${colors.alert}
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
 
+ws-icon-0 = 1;1: 
+ws-icon-1 = 2;2: 
+ws-icon-2 = 3;3: 
+ws-icon-3 = 4;4:  
+ws-icon-4 = 5;5: 
+ws-icon-5 = 6;6: 
+ws-icon-6 = 7;7: 
+ws-icon-7 = 8;8: 
+ws-icon-8 = 9;9: 
+ws-icon-9 = 10;10: 
+
+label-mode-padding = 2
+label-mode-foreground = #928374
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %icon%
+label-focused-background = #504945
+label-focused-underline=
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+;label-separator = 
+
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song>  %{F#555}|%{F-}  <icon-prev> <icon-stop> <toggle> <icon-next>
+click-right = "mpc toggle"
+
+icon-prev = %{F#777}%{F-}
+icon-stop = %{F#d63031}%{F-}
+icon-play = %{F#00b894}%{F-}
+icon-pause = %{F#f5a70a}%{F-}
+icon-next = %{F#777}%{F-}
+
+label-offline = %{F#d63031}%{F-} mpd is offline
+label-song = %{F#00b894}%{F-} %title%
+label-song-maxlen = 40
+label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
 
-format = <ramp> <label> <bar>
+format = <label> <bar>
+label = BL
 
-ramp-0 = 🔅
-ramp-1 = 🔅
-ramp-2 = 🔆
-ramp-3 = 🔆
-ramp-4 = 🔆
 
-label = "%percentage%%"
-label-foreground = ${colors.foreground}
 
-bar-width = 20
-bar-indicator = 
-bar-indicator-foreground = ${colors.foreground}
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = ${colors.primary_dark}
+bar-fill-foreground = #9f78e1
 bar-empty = ─
 bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground}
-enable-scroll = true
+bar-empty-foreground = ${colors.foreground-alt}
 
 [module/backlight-acpi]
 inherit = module/xbacklight
-type = internal/xbacklight
-card = nvidia_backlight 
+type = internal/backlight
+card = intel_backlight
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #fb4934
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #b8bb26
+label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
-interval = 5.0
+interface = w1p1s0
+interval = 3.0
 
-format-connected-prefix = "  "
-format-connected = <label-connected>
-format-connected-foreground = ${colors.foreground}
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = #9f78e1
 label-connected = %essid%
-label-connected-foreground = ${colors.foreground}
 
 format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
 
-[module/eth]
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.foreground-alt}
+
+[module/ethernet]
 type = internal/network
-interface = enp0s10
-interval = 5.0
+interface = enp3s0
+interval = 3.0
 
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground}
-format-connected-foreground = ${colors.foreground}
-label-connected = " "
+;format-connected-underline = #55aa55
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %{F#00b894}%{F-} ethernet
 
-format-disconnected =
+;format-disconnected =
+format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+label-disconnected = %{F#d63031}%{F-} disconnected
+;label-disconnected-foreground = ${colors.foreground-alt+}
 
 [module/date]
 type = internal/date
-interval = 300
+interval = 5
 
-date = "%d/%m/%Y"
+date = "%{F-}%m%{F#555}/%{F-}%d%{F#555}/%{F-}%Y"
+date-alt = " %m-%d-%Y"
 
-format-prefix = " "
-format-foreground = ${colors.foreground}
-format-prefix-foreground = ${colors.foreground}
+time = %H:%M
+time-alt = %H:%M:%S
 
-label = %date%
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = 
 
-[module/time]
-type = internal/date
-interval=1
-
-date =
-time = "%H:%M:%S"
-
-format-prefix = " "
-label = %time%
-
-format-foreground = ${colors.foreground}
-format-prefix-foreground = ${colors.foreground}
-
-
-[module/time-date]
-type = internal/date
-interval = 1
-
-date = " %H:%M:%S  "
-date-alt = " %d/%m/%y  "
-
-time = " " 
-time-alt =  " "
-label = %date% %time%
-
-format-date-foreground = ${colors.foreground}
-format-time-foreground = ${colors.background-alt}
+label = %{F#83a598}%{F-} %time%  %{F#83a598}%{F-} %date%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-use-ui-max = true
-format-volume = <ramp-volume> <label-volume> <bar-volume>
+format-volume = <label-volume> <bar-volume>
+label-volume =  %{F#83a598}%{F-} %percentage%%
+label-volume-foreground = ${root.foreground}
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-ramp-volume-5 = 
-ramp-volume-6 = 
-ramp-volume-7 = 
-ramp-volume-8 = 
-ramp-volume-9 = 
-ramp-volume-10 = 
-ramp-volume-11 = 
+label-muted = %{F#d63031}%{F-} muted
+label-muted-foreground = #666
 
-
-label-volume = %percentage%%
-label-volume-foreground = ${colors.foreground}
-
-label-muted =  muted
-label-muted-foreground = #8a8381
-
-bar-volume-width = 20
-bar-volume-foreground-0 = ${colors.primary_dark}
-;2587bd
-;bar-volume-foreground-0 = #59ff55
-;bar-volume-foreground-1 = #59ff55
-;bar-volume-foreground-2 = #59ff55
-;bar-volume-foreground-3 = #59ff55
-;bar-volume-foreground-4 = #59ff55
-;bar-volume-foreground-5 = #f5a70a
-;bar-volume-foreground-6 = #ff5555
+scroll-up = pactl set-sink-volume 0 +2%
+bar-volume-width = 9
+bar-volume-foreground-0 = ${colors.secondary}
+bar-volume-foreground-1 = ${colors.secondary}
+bar-volume-foreground-2 = ${colors.secondary}
+bar-volume-foreground-3 = ${colors.secondary}
+bar-volume-foreground-4 = ${colors.secondary}
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = ${colors.alert}
 bar-volume-gradient = false
-bar-volume-indicator = 
-bar-volume-indicator-font = 3
+bar-volume-indicator = ●
+bar-volume-indicator-font = 2
+bar-volume-fill = ━
+bar-volume-fill-font = 2
+bar-volume-empty = ━
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground}
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -554,31 +559,49 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-;format-charging-underline = #ffb52a
+format-charging-underline = #ffb52a
 
 format-discharging = <animation-discharging> <label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = "   "
-;format-full = <ramp-capacity>
-format-full-prefix-foreground = ${colors.foreground}
-;format-full-underline = ${self.format-charging-underline}
-format-full-foreground = ${colors.foreground}
-ramp-capacity-0 = ▂
-ramp-capacity-1 = ▂▆
-ramp-capacity-2 = ▂▆▉ 
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 60
+animation-charging-framerate = 750
 
 animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-foreground = ${colors.foreground}
-animation-discharging-framerate = 600
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+[module/temperature]
+type = internal/temperature
+interval = 1.5
+thermal-zone = 0
+hwmon-path = /sys/class/hwmon/hwmon1/temp1_input
+base-temperature = 40
+warn-temperature = 60
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%
+label-warn =   %temperature-c%
+
+ramp-0 = %{F#0984e3}%{F-}
+ramp-1 = %{F#f5a70a}%{F-}
+ramp-2 = %{F#d63031}%{F-}
 
 [module/powermenu]
 type = custom/menu
@@ -587,19 +610,27 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = " "
-label-open-foreground = ${colors.foreground}
-label-close =  " "
-label-close-foreground = ${colors.red}
-label-separator = " "
-label-separator-foreground = 
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close =  cancel
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = 
-menu-0-0-foreground = ${colors.foreground}
-menu-0-0-exec = i3-nagbar -m 'Do you want to power off your system?' -B '' 'poweroff' -t warning 
-menu-0-1 = 
-menu-0-1-foreground = ${colors.foreground}
-menu-0-1-exec = i3-nagbar -m 'Do you want to reboot your system?' -B '' 'systemctl reboot' -t warning
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
@@ -610,8 +641,8 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 0
-margin-bottom = 0
+margin-top = 5
+margin-bottom = 5
 
 ; vim:ft=dosini
 

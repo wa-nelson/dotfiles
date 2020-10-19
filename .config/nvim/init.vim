@@ -4,6 +4,7 @@ source ~/.vimrc
 
 call plug#begin('~/.config/nvim/plugs')
 Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/syntastic'
 call plug#end()
 
 "autocmd vimenter * NERDTree
@@ -19,7 +20,20 @@ set softtabstop=0 noexpandtab
 
 " ================= Plugin Configuration
 
-" commenter
+" ======== SYNTASTIC
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['python']
+
+"commenter
 
 " Add spaces after comment delimiters by default
 "let g:NERDSpaceDelims = 1

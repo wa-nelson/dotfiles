@@ -151,10 +151,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 2 px or 2 ppt
+        bindsym l resize shrink width 2 px or 2 ppt
         bindsym k resize grow height 2 px or 2 ppt
-        bindsym l resize shrink height 2 px or 2 ppt
-        bindsym semicolon resize grow width 2 px or 2 ppt
+        bindsym j resize shrink height 2 px or 2 ppt
+        bindsym h resize grow width 2 px or 2 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -174,9 +174,9 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 
 
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/gruvPape.jpg
+exec_always --no-startup-id feh --bg-fill ~/dotfiles/staticGruv.png
 exec_always --no-startup-id nm-applet
-exec_always --no-startup-id ${HOME}/.config/polybar/launch.sh
+exec_always --no-startup-id polybar topright & polybar topleft1440
 exec_always --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 #exec_always --no-startup-id sudo service syncthing@alex start
 
