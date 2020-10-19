@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# This file runs when a DM logs you into a graphical session.
+
+xsetroot -cursor_name left_ptr &
+polybar topright & polybar topleft1440 &
+xrandr -s 3440x1440 -r 100 &
+compton &
+feh --bg-fill ~/dotfiles/gruvPape.jpg

@@ -7,7 +7,7 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 
 # list of files/folders to symlink in homedir
-files=".Xresources .aliases .bashrc .tmux.conf .vimrc .config/compton.conf .tmux-themes .colors .config/i3 .config/i3status .config/rofi .config/nvim .config/kitty .config/mpd .config/ncmpcpp"    
+files=".Xresources .xprofile .xinitrc .aliases .bashrc .tmux.conf .vimrc .config/compton.conf .tmux-themes .colors .config/i3 .config/i3status .config/rofi .config/nvim .config/kitty .config/mpd .config/ncmpcpp"    
 
 ##########
 
