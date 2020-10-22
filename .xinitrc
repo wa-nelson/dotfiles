@@ -1,2 +1,1 @@
-./.xprofile &
-exec bspwm
+./.xprofile & exec i3

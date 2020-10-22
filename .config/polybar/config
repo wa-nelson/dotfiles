@@ -60,7 +60,7 @@ modules-left = cpu memory
 modules-center = mpd
 modules-right = ethernet date
 
-wm-restack = bspwm
+wm-restack = i3
 
 override-redirect = true
 
@@ -103,7 +103,7 @@ modules-left = cpu memory
 modules-center = mpd
 modules-right = ethernet date
 
-wm-restack = bspwm
+wm-restack = i3 
 
 override-redirect = true
 
@@ -147,7 +147,7 @@ modules-left = cpu memory
 modules-center = 
 modules-right = ethernet date
 
-wm-restack = bspwm
+wm-restack = i3 
 
 override-redirect = true
 
@@ -190,7 +190,7 @@ modules-left = cpu memory
 modules-center = 
 modules-right = date battery
 
-wm-restack = bspwm 
+wm-restack = i3
 
 override-redirect = true
 
@@ -235,7 +235,7 @@ modules-left =
 modules-center = mpd
 modules-right = 
 
-wm-restack = bspwm
+wm-restack = i3
 
 override-redirect = true
 
@@ -276,11 +276,11 @@ font-3 = Font Awesome 5 Free Solid:style=Solid:size=12;0
 font-4 = Font Awesome 5 Brands Regular:style=Regular:size=12;0
 font-5 = Font Awesome 5 Free:style=Regular:size=12;0
 
-modules-left = bspwm
+modules-left = i3
 modules-center =
 modules-right =
 
-wm-restack = bspwm
+wm-restack = i3
 
 ;\override-redirect = true
 
