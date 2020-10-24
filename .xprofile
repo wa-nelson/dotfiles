@@ -4,7 +4,7 @@
 source ~/.config/env
 
 xsetroot -cursor_name left_ptr &
-polybar topright & polybar topleft1440 &
+polybar topright & polybar topleft &
 xrandr -s 3440x1440 -r 100 &
 compton &
-feh --bg-fill ~/dotfiles/gruvPape.jpg
+feh --bg-fill --no-fehbg ~/dotfiles/gruvPape.jpg

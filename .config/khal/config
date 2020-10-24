@@ -1,7 +1,7 @@
 [calendars]
 
 [[caldav]]
-path = /home/alex/Documents/ProductivitySuite/calendars/caldav
+path = ~/Documents/ProductivitySuite/calendars/caldav
 type = calendar
 
 [locale]

@@ -8,17 +8,17 @@ while pgrep -u 1000 -x polybar >/dev/null; do sleep 1; done
 
 if xrandr | grep '*' | grep '2560x1440'; then
 polybar topright &
-polybar topleft1440
+polybar topleft
 fi
 
 if xrandr | grep '*' | grep '1920x1080'; then
 polybar topright &
-polybar topleft1080
+polybar topleft
 fi
 
 if xrandr | grep ' connected' | grep '3840x2160'; then
 polybar topright &
-polybar topleft4k
+polybar topleft
 fi
 
 echo Polybar launched...

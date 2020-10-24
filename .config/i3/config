@@ -38,6 +38,8 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
 bindsym $mod+d exec "~/.config/rofi/scripts/appsmenu.sh"
+bindsym $mod+Shift+d exec "~/.config/rofi/scripts/scrotmenu.sh"
+bindsym $mod+Control+d exec "~/.config/rofi/scripts/powermenu.sh"
 
 # change focus
 bindsym $mod+h focus left

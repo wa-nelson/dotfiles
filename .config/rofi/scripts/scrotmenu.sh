@@ -3,9 +3,9 @@
 rofi_command="rofi -theme themes/scrotmenu.rasi"
 
 ### Options ###
-screen=""
-area=""
-window=""
+screen="scr"
+area="ar"
+window="win"
 # Variable passed to rofi
 options="$screen\n$area\n$window"
 
@@ -15,7 +15,7 @@ case $chosen in
         sleep 1; scrot
         ;;
     $area)
-        scrot -s
+        scrot -s -e 'mv $f ~/pix/scrot'
         ;;
     $window)
         sleep 1; scrot -u
