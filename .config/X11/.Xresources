@@ -1,0 +1,15 @@
+#include ".colors/gruvbox-dark.xresources"
+
+*faceName: Fira Code
+*faceSize: 18
+Xcursor.size: 12 
+
+!! URxvt Appearance
+URxvt.font: xft:Fira Code
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.internalBorder: 12
