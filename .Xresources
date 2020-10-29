@@ -1,4 +1,0 @@
-#include ".colors/nord"
-
-xterm*faceName: Fira Code
-xterm*faceSize: 14
