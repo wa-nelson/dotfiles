@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for f in *.HEIC
+do
+echo "Working on file $f"
+f2=${f::-5}
+heif-convert $f $f2.jpg
+done
+
+rm *.HEIC
+
+exiftool '-Directory<CreateDate' -d %Y-%m -r .
