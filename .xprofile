@@ -5,6 +5,6 @@ source ~/.config/env
 
 xsetroot -cursor_name left_ptr &
 polybar topright & polybar topleft &
-xrandr -s 3440x1440 -r 100 &
+# xrandr -s 3440x1440 -r 100 &
 compton &
 feh --bg-fill --no-fehbg ~/dotfiles/gruvPape.jpg
