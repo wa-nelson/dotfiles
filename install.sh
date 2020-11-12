@@ -36,6 +36,7 @@ if yes "$response"; then
 		files+=".config/kitty" 
 		files+=".config/mpd" 
 		files+=".config/ncmpcpp" 
+		files+=".config/tmux" 
 
 		##########
 		# change to the dotfiles directory
