@@ -15,7 +15,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-set tabstop=4
+set tabstop=8
+set shiftwidth=4
 set softtabstop=0 noexpandtab
 
 " ================= Plugin Configuration
