@@ -53,6 +53,7 @@ cyclic_scrolling = "no"
 header_text_scrolling = "yes"
 jump_to_now_playing_song_at_start = "yes"
 lines_scrolled = "2"
+mouse_list_scroll_whole_page = "no"
 
 ## Other ##
 system_encoding = "utf-8"
