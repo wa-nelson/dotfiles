@@ -193,4 +193,4 @@ bindsym ctrl+$mod+l exec --no-startup-id "~/.config/i3/lock.sh"
 bindsym ctrl+$mod+k exec --no-startup-id "systemctl hibernate"
 
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
-
+for_window [class="Microsoft Teams - Preview" instance="microsoft teams - preview"] floating enable
