@@ -46,3 +46,5 @@ alias vdirsyncer='${HOME}/.local/bin/vdirsyncer'
 alias khal='${HOME}/.local/bin/khal'
 alias khali='khal interactive'
 alias khalc='khal calendar'
+
+alias wget="wget --hsts-file ~/.config/wget/wget-hsts"
