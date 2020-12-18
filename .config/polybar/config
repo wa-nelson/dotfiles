@@ -302,8 +302,6 @@ format-underline =
 
 label = %{F#83a598}%{F-} %time%  %{F#83a598}%{F-} %date%
 
-click-right = gsimplecal
-
 [module/pulseaudio]
 type = internal/pulseaudio
 
