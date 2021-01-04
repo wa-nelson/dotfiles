@@ -12,7 +12,7 @@ hibernate="hb"
 # Variable passed to rofi
 options="$power_off\n$reboot\n$lock\n$suspend\n$log_out\n$hibernate"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 6)"
 case $chosen in
     $power_off)
         systemctl poweroff
