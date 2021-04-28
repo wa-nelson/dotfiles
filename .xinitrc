@@ -1,1 +1,0 @@
-./.xprofile & exec i3
